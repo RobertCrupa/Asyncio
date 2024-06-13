@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "asyncio"
+version = "0.1.0"
+description = "Examples of using asyncio from book"
+authors = ["Robert Crupa <robertcrupa@outlook.com>"]
+license = "mit"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.2"
+asyncio = "^3.4.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
