@@ -1,14 +1,15 @@
 [tool.poetry]
-name = "asyncio"
+name = "asyncio_examples"
 version = "0.1.0"
 description = "Examples of using asyncio from book"
 authors = ["Robert Crupa <robertcrupa@outlook.com>"]
-license = "mit"
+license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "3.10.2"
 asyncio = "^3.4.3"
+pre-commit = "^3.7.1"
 
 
 [build-system]
