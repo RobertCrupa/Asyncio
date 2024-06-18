@@ -47,8 +47,19 @@ async def cancell_routine_2_11() -> None:
 
 
 @async_timed()
+async def timeout_2_12() -> None:
+    delay_task = asyncio.create_task(delay(2))
+
+    try:
+        result = await asyncio.wait_for(delay_task, timeout=1)
+        print(result)
+    except asyncio.exceptions.TimeoutError:
+        print(f'Task timed out, was it cancelled? {delay_task.cancelled()}')
+
+
+@async_timed()
 async def main():
 
-    await cancell_routine_2_11()
+    await timeout_2_12()
 
 asyncio.run(main())
